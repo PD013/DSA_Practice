@@ -6,3 +6,11 @@ FROM Customers as C
 LEFT JOIN Orders as O
 ON  C.id = O.customerId) temp
 WHERE orderd is NULL 
+
+-- SIMPLE WAYY
+-- SELECT name as Customers
+-- from Customers
+-- where id not in (
+--     select customerId
+--     from Orders
+-- );
