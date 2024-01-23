@@ -7,3 +7,4 @@ FROM Activities
 GROUP BY sell_date
 order by sell_date ASC;
 # In group_concat the default seprator is ',' 
+#concat() and concat_ws() are appropriate for concatenating the values of multiple columns within the same row, while group_concat() joins together values from different rows
