@@ -7,14 +7,9 @@ class Solution(object):
         """
         if len(s) != len(t):
             return False
-        
-        freq = [0] * 26
-        for i in range(len(s)):
-            freq[ord(s[i]) - ord('a')] += 1
-            freq[ord(t[i]) - ord('a')] -= 1
-        
-        for i in range(len(freq)):
-            if freq[i] != 0:
+
+        tem = set(s)
+        for i in tem:
+            if not (i in t and i in s and s.count(i) == t.count(i)):
                 return False
-        
         return True
