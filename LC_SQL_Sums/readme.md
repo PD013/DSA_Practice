@@ -1,1 +1,1 @@
-This contains all the  DSA Questions solved on LC 
+This contains all the  SQL Questions solved on LC 
