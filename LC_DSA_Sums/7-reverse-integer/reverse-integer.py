@@ -1,16 +1,14 @@
-class Solution:
-    def reverse(self, x: int) -> int:
-    # @return an integer
-        result = 0
+class Solution(object):
+    def reverse(self, n):
+        INT_MIN, INT_MAX = -2**31, 2**31 - 1
+        
+        reversed_num = int(str(n)[::-1]) if n >= 0 else -int(str(-n)[::-1])
 
-        if x < 0:
-            symbol = -1
-            x = -x
-        else:
-            symbol = 1
+        if reversed_num > INT_MAX or reversed_num < INT_MIN:
+            return 0
 
-        while x:
-            result = result * 10 + x % 10
-            x //= 10
+        return reversed_num
+        
 
-        return 0 if result > pow(2, 31) else result * symbol
+        
+        
